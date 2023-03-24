@@ -8,14 +8,14 @@
     <title>Deepika Gupta</title>
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="Fonts"/>
+    <link rel="icon" href="Images/D-Home.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/f238228744.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <nav class="HomePage">
-
-    <div class="sidenav" id="dropDownClick">
-      <div class="box box1">
+  <div class="HomePage">
+    <nav class="sidenav" id="dropDownClick">
+      <!-- <div class="box box1">
         <ul>
           <li class="Image"><a href="index.html"><img class="Dimg" src="Images/D-HomePage.png" alt="D image" /><img
                 class="Dimg-font" src="Images/Deepika-font.png" alt="Deepika" srcset=""></a></li>
@@ -35,8 +35,8 @@
           <li><a href="https://github.com/kajaveaniruddha/Dr.-Deepika-Gupta" target="blank"><i id="fancy2"
                 class="fa-brands fa-github"></i></a></li>
         </ul>
-      </div>
-    </div>
+      </div> -->
+    </nav>
 
 
     <div class="InnerPage" id="innerpage">
@@ -69,24 +69,9 @@
         <span class="bounce1">scroll down &rarr;</span>
       </div>
     </div>
-  </nav>
+  </div>
 
-  <script>
-    function dropdownMenu() {
-      let id = document.getElementById("dropDownClick")
-      let ham = document.getElementById("hamBurger")
-      let anchor = ham.getElementsByTagName('a')
-
-      if (id.className === "sidenav") {
-        id.className += " responsive"
-        anchor[0].innerHTML = "&#x2716;"
-      } else {
-        id.className = "sidenav"
-        anchor[0].innerHTML = '&#9776;';
-      }
-    }
-
-  </script>
+  <script src="index.js"></script>
 </body>
 
 </html>

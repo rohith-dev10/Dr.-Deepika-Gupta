@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <nav class="HomePage">
-        <div class="sidenav" id="dropDownClick">
-            <div class="box box1">
+    <div class="HomePage">
+        <nav class="sidenav" id="dropDownClick">
+            <!-- <div class="box box1">
                 <ul>
                     <li class="Image"><a href="index.html"><img class="Dimg" src="Images/D-HomePage.png"
                                 alt="D image" /><img class="Dimg-font" src="Images/Deepika-font.png" alt="Deepika"
@@ -22,12 +22,11 @@
                     <li><a>Qualification</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="professional.html">Professional</a></li>
-                    <li><a href="research.html">Research</a></li>
+                    <li><a href="research.html">research</a></li>
                     <li><a href="teaching.html">Teaching</a></li>
                     <li class="hamburgerMenu" id="hamBurger"><a href="javascript:void(0);" onClick="dropdownMenu()"
-                            style="border: 0; padding: 10px 5px 5px;width: 40px; height: 40px;">&#9776;</a></li>
+                        style="border: 0px; padding: 5px;padding-top: 10px; width: 40px; height: 40px;">&#9776;</a></li>
                 </ul>
-
             </div>
             <div class="box box2">
                 <ul class="fancyfonts">
@@ -35,72 +34,37 @@
                     <li><a href="https://github.com/kajaveaniruddha/Dr.-Deepika-Gupta" target="blank"><i id="fancy2"
                                 class="fa-brands fa-github"></i></a></li>
                 </ul>
-            </div>
-        </div>
-
-        <div class="ResearchPage" id="ResearchPage">
-            <div class="InnerPage" id="InnerPage">
-
+            </div> -->
+        </nav>
+        <div class="qualificationPage" id="qualificationPage">
                 <a href="deepikamam.pdf" target="_blank" class="resume-button" rel="resume">Resume</a>
-
-                <section class="Research" id="Research">
+                <div class="qualification" id="qualification">
                     <div class="TextArea">
-                        <br>
-                        <h1 aria-label="Dr. Deepika Gupta" class="name">
-                            <span class="colChange" aria-hidden="true" style="opacity: 1;">Q</span><span
-                                class="colChange" aria-hidden="true" style="opacity: 1;">u</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">a</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">l</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">i</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">f</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">i</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">c</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">a</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">t</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">i</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">o</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">n</span><span class="colChange"
-                                aria-hidden="true" style="opacity: 1;">s</span><br>
-                        </h1>
-
+                            <h1 class="colChange" aria-hidden="true" style="opacity: 1;">Qualification</h1>
                         <div class="ag-format-container">
                             <div class="ag-courses_box">
-
-
                                 <div class="ag-courses_item">
                                     <a href="#" class="ag-courses-item_link_a">
                                         <div class="ag-courses-item_bg"></div>
-
                                         <div class="ag-courses-item_title">
                                             M.Tech in Computer Science and Engineering
                                         </div>
-
                                         <div class="ag-courses-item_date-box">
-                                            <br>
-                                            <br>
-
                                             <span class="ag-courses-item_date">
                                                 Malviya National Institute of Technology (MNIT), Jaipur, 2011
                                             </span>
                                         </div>
                                     </a>
                                 </div>
-
                                 <div class="ag-courses_item">
                                     <a href="#" class="ag-courses-item_link_a">
                                         <div class="ag-courses-item_bg"></div>
-
                                         <div class="ag-courses-item_title">
                                             B.Tech in Information Technology
                                         </div>
-
                                         <div class="ag-courses-item_date-box">
-                                            <br>
-                                            <br>
-
                                             <span class="ag-courses-item_date">
                                                 Uttar Pradesh Technical University, 2008
-
                                             </span>
                                         </div>
                                     </a>
@@ -108,57 +72,24 @@
                                 <div class="ag-courses_item">
                                     <a href="#" class="ag-courses-item_link_a">
                                         <div class="ag-courses-item_bg"></div>
-
                                         <div class="ag-courses-item_title">
                                             Ph.D. in Computer Science and Engineering
                                         </div>
-
                                         <div class="ag-courses-item_date-box">
-                                            Thesis: Efficient Preprocessing and Recognition Strategies for Script
-                                            Independent Indian
-                                            OCR Systems
-                                            <br>
-
-
                                             <span class="ag-courses-item_date">
-
-                                                Indian Institute of Technology (Indian School of Mines) Dhanbad, 2021
+                                            Indian Institute of Technology (Indian School of Mines) Dhanbad, 2021
                                             </span>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
-
-
-
-
                     </div>
-
-                </section>
-
             </div>
         </div>
+    </div>
 
-
-    </nav>
-
-    <script>
-        function dropdownMenu() {
-            let id = document.getElementById("dropDownClick")
-            let ham = document.getElementById("hamBurger")
-            let anchor = ham.getElementsByTagName('a')
-
-            if (id.className === "sidenav") {
-                id.className += " responsive"
-                anchor[0].innerHTML = "&#x2716;"
-            } else {
-                id.className = "sidenav"
-                anchor[0].innerHTML = '&#9776;';
-            }
-        }
-
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -26,7 +26,7 @@ body {
   background: #181818;
   min-height: 100vh;
   width: 160px;
-   position: fixed;
+  position: fixed;
   overflow-x: hidden;
   overflow-y: hidden;
   display: flex;
@@ -34,6 +34,7 @@ body {
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  z-index: 10;
 }
 
 .Dimg {
@@ -78,7 +79,7 @@ body {
 }
 
 .InnerPage {
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -123,10 +124,10 @@ body {
   font-family: coolvetica, serif;
   letter-spacing: 3px;
   font-weight: 550;
-  font-size: 103px;
+  font-size: calc(60px + 6 * ((100vw - 320px) / 300));
   line-height: 1em;
   position: relative;
-  margin-right: -4px;
+  margin-left: 20px;
 }
 
 /* .TextArea h1 span:hover {
@@ -164,6 +165,7 @@ body {
   letter-spacing: 2px;
   font-size: 20px;
   position: relative;
+  margin-left: 40px;
 }
 
 /* .scrolldown-right {
@@ -184,34 +186,37 @@ body {
 /* --------------Teaching-------------- */
 
 #TeachingPage {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  left: 160px;
+  /* left: 160px; */
   display: block;
-  width: 90%;
+  /* padding-left: 170px; */
+  width: 100%;
+  position: absolute;
   box-sizing: border-box;
-
 }
 
 .Teaching {
   display: flex;
   align-items: center;
-  padding: 30px 0px 0px 80px;
+  padding: 30px 10px 0px 170px;
   position: relative;
   overflow-x: hidden;
-  overflow-y: hidden;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .ag-format-container {
   margin-top: 50px;
-  width: 1142px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 
 .ag-courses_box {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
@@ -219,30 +224,32 @@ body {
   align-items: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-
-  padding: 50px 0;
+  /* padding: 50px 0; */
+  /* justify-content: center; */
+  position: relative;
+  justify-content: center;
 }
 
 .ag-courses_item {
   -ms-flex-preferred-size: calc(33.33333% - 30px);
   flex-basis: calc(33.33333% - 30px);
-  margin: 0 15px 30px;
-
-
+  margin: 0 15px 30px 0;
   overflow: hidden;
-
   border-radius: 28px;
+  height: auto;
+  flex-grow: 1;
+  min-width: 310px;
+  max-width: 420px;
 }
 
 .ag-courses-item_link {
   display: block;
-  min-height: 235px;
+  min-height: 200px;
   padding: 30px 20px;
   background-color: #1a1919;
-
   overflow: hidden;
-
   position: relative;
+  min-width: 300px;
 }
 
 .ag-courses-item_link:hover,
@@ -374,6 +381,10 @@ body {
     display: block;
   }
 
+  .Teaching{
+    padding: 70px 0px 0px 25px;
+  }
+
   .InnerPage .resume-button {
     top: 0;
     left: 0.5rem;
@@ -449,6 +460,7 @@ body {
 
   #TeachingPage {
     left: 0;
+    padding-left: 0;
   }
 }
 
