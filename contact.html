@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deepika Gupta</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="Fonts" />
+    <link rel="shortcut icon" href="Images/D-Home.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/f238228744.js" crossorigin="anonymous"></script>
     <!-- Map src -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
@@ -16,53 +18,19 @@
 
 <body>
     <div class="HomePage">
-        <div class="sidenav" id="dropDownClick">
-            <div class="box box1">
-                <ul>
-                    <li class="Image"><a href="index.html"><img class="Dimg" src="Images/D-HomePage.png"
-                                alt="D image" /><img class="Dimg-font" src="Images/Deepika-font.png" alt="Deepika"
-                                srcset=""></a></li>
-                    <li><a href="qualification.html">Qualification</a></li>
-                    <li><a>Contact</a></li>
-                    <li><a href="professional.html">Professional</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="teaching.html">Teaching</a></li>
-                    <li class="hamburgerMenu" id="hamBurger"><a href="javascript:void(0);" onClick="dropdownMenu()"
-                            style="border: 0px; padding: 5px;padding-top: 10px; width: 40px; height: 40px;">&#9776;</a>
-                    </li>
-                </ul>
-
-            </div>
-            <div class="box box2">
-                <ul class="fancyfonts">
-                    <li><a href="https://www.linkedin.com/in/dr-deepika-gupta-08364b11" target="blank"><i id="fancy1" class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li><a href="https://github.com/kajaveaniruddha/Dr.-Deepika-Gupta" target="blank"><i id="fancy2"
-                                class="fa-brands fa-github"></i></a></li>
-                </ul>
-            </div>
-        </div>
+        <nav class="sidenav" id="dropDownClick"></nav>
 
         <div class="InnerPage InnerPage-contact">
-
             <div class="resume-contact">
                 <a href="deepikamam.pdf" target="_blank" class="resume-button" rel="resume">Resume</a>
             </div>
-
             <div class="Contact_head" style="display: flex">
-
                 <div class="contact-Info">
-
                     <div class="contact-me">
-
                         <section class="page-out" id="page-out">
-
-                            <h1 aria-label="Dr. Deepika Gupta" class="name">
-                                <span class="colChange" aria-hidden="true" style="opacity: 1;">Contact Me</span>
-                            </h1>
+                            <h1>Contact Me</h1>
                         </section>
-
                     </div>
-
                     <div class="contact-form" style="width: 100%">
 
                         <form id="contact" autocomplete="off">
@@ -131,23 +99,8 @@
         </div>
     </div>
 
+    <script src="index.js"></script>
 
-    <script>
-        function dropdownMenu() {
-            let id = document.getElementById("dropDownClick")
-            let ham = document.getElementById("hamBurger")
-            let anchor = ham.getElementsByTagName('a')
-
-            if (id.className === "sidenav") {
-                id.className += " responsive"
-                anchor[0].innerHTML = "&#10060;"
-            } else {
-                id.className = "sidenav"
-                anchor[0].innerHTML = '&#9776;';
-            }
-        }
-
-    </script>
 </body>
 
 </html>

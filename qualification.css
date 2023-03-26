@@ -20,12 +20,11 @@ body {
 
 .HomePage {
   display: flex;
-  /* height: 100%; */
 }
 
 .sidenav {
   background: #181818;
-  height: 100vh;
+  min-height: 100vh;
   width: 160px;
   position: fixed;
   overflow-x: hidden;
@@ -37,15 +36,16 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.Dimg {
-  width: 60px;
-  padding-top: 15px;
-  height: 75px;
-}
+.sidePhoto {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+  }
 
-.Dimg-font {
-  width: 75px;
-  padding-bottom: 10px;
+.sidePhoto-font {
+    width: 75px;
+    padding-bottom: 10px;
 }
 
 .sidenav .box1 ul li a {
@@ -57,6 +57,7 @@ body {
   padding: 15px;
   color: #888888;
   display: block;
+  transition: 0.3s ease-in-out;
 }
 
 .box1 ul li a:hover {
@@ -71,6 +72,7 @@ body {
 
 .box2 ul li a {
   color: #888888;
+  transition: 0.3s ease-in-out;
 }
 
 .box2 ul li a:hover {

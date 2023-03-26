@@ -36,15 +36,16 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.Dimg {
-  width: 60px;
-  padding-top: 15px;
-  height: 75px;
-}
+.sidePhoto {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+  }
 
-.Dimg-font {
-  width: 75px;
-  padding-bottom: 10px;
+.sidePhoto-font {
+    width: 75px;
+    padding-bottom: 10px;
 }
 
 .sidenav .box1 ul li a {
@@ -56,11 +57,12 @@ body {
   padding: 15px;
   color: #888888;
   display: block;
+  transition: 0.3s ease-in-out;
 }
 
 .box1 ul li a:hover {
   color: #0cf2cf;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .box2 ul li {
@@ -70,6 +72,7 @@ body {
 
 .box2 ul li a {
   color: #888888;
+  transition: 0.3s ease-in-out;
 }
 
 .box2 ul li a:hover {
@@ -116,21 +119,23 @@ body {
 .resume-button:hover:before {
   transform: scaleX(1);
 }
+
+/* --------------Professional-------------- */
+
 .TextArea h1 {
   color: #08fdd8;
   font-family: coolvetica, serif;
   letter-spacing: 3px;
   font-weight: 550;
-  font-size: 103px;
+  font-size: calc(60px + 6 * ((100vw - 320px) / 300));
   line-height: 1em;
   position: relative;
-  margin-right: -4px;
+  margin-left: 20px;
 }
 
-/* --------------Professional-------------- */
 
 .professionalPage {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;

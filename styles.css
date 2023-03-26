@@ -24,27 +24,28 @@ body {
   height: 100%;
 }
 
-.sidenav {
+/* .sidenav {
   background: #181818;
   min-height: 100%;
   width: 160px;
-   position: fixed;
+  position: fixed;
   overflow-x: hidden;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.Dimg {
+.sidePhoto {
+  border-radius: 50%;
   width: 60px;
-  padding-top: 15px;
-  height: 75px;
+  height: 60px;
+  margin-top: 15px;
 }
 
-.Dimg-font {
+.sidePhoto-font {
   width: 75px;
   padding-bottom: 10px;
 }
@@ -58,11 +59,12 @@ body {
   padding: 15px;
   color: #888888;
   display: block;
+  transition: 0.3s ease-in-out;
 }
 
 .box1 ul li a:hover {
   color: #0cf2cf;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .box2 ul li {
@@ -72,12 +74,13 @@ body {
 
 .box2 ul li a {
   color: #888888;
+  transition: 0.3s ease-in-out;
 }
 
 .box2 ul li a:hover {
   color: #0cf2cf;
   transition: 0.3s ease-in-out;
-}
+} */
 
 .InnerPage {
   min-height: 100%;
@@ -130,7 +133,13 @@ body {
   overflow-y: hidden;
 }
 
+.TextArea {
+  display: flex;
+  flex-direction: row;
+}
+
 .TextArea h1 {
+  display: inline-block;
   color: #fff;
   font-family: coolvetica, serif;
   letter-spacing: 3px;
@@ -144,20 +153,16 @@ body {
 .name span {
   box-sizing: border-box;
   display: inline-block;
+  transition: 0.3s ease-in-out;
 }
 
 .TextArea h1 span:hover {
   color: #0cf2cf;
-  transition: 0.4s ease-in-out;
-}
-
-.name img {
-  box-sizing: border-box;
-  width: 60px;
-  padding-right: 3px;
+  transition: 0.3s ease-in-out;
 }
 
 .greyText {
+  display: inline-block;
   margin-top: 40px;
   margin-bottom: 30px;
   padding: 0;
@@ -181,9 +186,164 @@ body {
   animation: scroll 0.5s linear infinite alternate-reverse;
 }
 
+.profilePhoto {
+  box-sizing: content-box;
+  position: absolute;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 30px;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: solid;
+  border-color: #08fdd8;
+  border-width: 1.4px;
+  outline: 2px solid #08fdd8;
+  outline-offset: 8px;
+  transform: translateY(70%);
+}
+
+.Text {
+  width: 65%;
+}
+
+.profile {
+  width: 35%;
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    padding: 5em 2em 2em 2em;
+  }
+
+  .TextArea {
+    flex-direction: column;
+  }
+
+  .TextArea h1 {
+    font-size: 14vw;
+  }
+
+  .greyText {
+    margin-top: 2em;
+    font-size: 3.2vw;
+  }
+
+  .Text {
+    width: 100%;
+  }
+
+  .profilePhoto {
+    position: relative;
+    width: 45vw;
+    height: 45vw;
+    margin: 0.5em 3em 1em 3em;
+    transform: translateY(0%);
+  }
+  .profile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .home {
+    padding: 4em 1.5em 0.5em 1.5em;
+  }
+
+  .TextArea h1 {
+    font-size: 14vw;
+  }
+
+  .greyText {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 4vw;
+  }
+  .Text {
+    width: 100%;
+  }
+
+  .profilePhoto {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    margin: 1em 3em 2em 3em;
+    transform: translateY(0%);
+  }
+  .profile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 825px) and (min-width: 600px) {
+  .home {
+    padding: 5em 1em 10em 3em;
+  }
+
+  .TextArea h1 {
+    font-size: 8vw;
+  }
+
+  .greyText {
+    margin-top: 2em;
+    font-size: 2.5vw;
+  }
+
+  .profile img {
+    width: 22vw;
+    height: 22vw;
+    transform: translateY(5em);
+  }
+}
+
+@media only screen and (max-width: 1250px) and (min-width: 825px) {
+  .home {
+    padding: 10em 1em 8.5em 3em;
+  }
+
+  .TextArea h1 {
+    font-size: 8vw;
+  }
+
+  .greyText {
+    margin-top: 2em;
+    font-size: 1.8vw;
+  }
+
+  .profile img {
+    width: 20vw;
+    height: 20vw;
+    transform: translateY(10em);
+  }
+}
+
+@media only screen and (max-width: 2000px) and (min-width: 1300px) {
+  .home {
+    padding: 10em 1em 8.5em 4em;
+  }
+
+  .TextArea h1 {
+    font-size: 8vw;
+    overflow-wrap: normal;
+  }
+
+  .greyText {
+    margin-top: 2em;
+    font-size: 2vw;
+  }
+
+  .profile img {
+    width: 22vw;
+    height: 22vw;
+    transform: translateY(10em);
+  }
+}
 
 /*---------Contact--------------*/
-
 
 .page-out {
   align-items: center;
@@ -200,7 +360,7 @@ body {
   width: 50%;
 }
 
-.Contact_head h1{
+.Contact_head h1 {
   color: #08fdd8;
   font-family: coolvetica, serif;
   letter-spacing: 3px;
@@ -211,11 +371,9 @@ body {
   margin-left: 16px;
 }
 
-
 .contact-des-div {
   width: 100%;
 }
-
 
 .contact-des {
   color: rgb(255, 255, 255);
@@ -254,7 +412,6 @@ body {
   transition: color 0.1s;
 }
 
-
 .input__field_input__field--hoshi-msg {
   display: inline-block;
   color: rgb(141, 141, 141);
@@ -274,7 +431,7 @@ body {
 
 .contact-form .flat-button.disabled {
   opacity: 0.3;
-  pointer-events: none
+  pointer-events: none;
 }
 
 .flat-button:before {
@@ -299,7 +456,7 @@ body {
   margin-right: 2%;
   height: 90%;
   outline: auto;
-  top: 15%
+  top: 15%;
 }
 
 .map-container {
@@ -331,7 +488,7 @@ body {
 #contact ul li input {
   width: 80%;
   margin-left: 6%;
-  margin-top: 2%;;
+  margin-top: 2%;
   margin-bottom: 0.3%;
 }
 
@@ -339,7 +496,6 @@ body {
   height: 100%;
   width: 50%;
 }
-
 
 @keyframes scroll {
   0% {
@@ -371,8 +527,7 @@ body {
   }
 }
 
-@media screen and (max-width: 990px){
-
+@media screen and (max-width: 990px) {
   .contact-Info {
     width: 100%;
   }
@@ -407,7 +562,7 @@ body {
     right: auto;
   }
 
-  .sidenav {
+  /* .sidenav {
     position: relative;
     float: right;
     width: 3rem;
@@ -470,12 +625,11 @@ body {
   .sidenav.responsive .box2 .fancyfonts {
     display: flex;
     justify-content: center;
-  }
+  } */
 }
 
 @media screen and (max-width: 552px) {
   h2 {
     font-size: 75px;
   }
-
-}
+} 
